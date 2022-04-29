@@ -1,6 +1,5 @@
 import styles from '../styles/Project.module.css'
-import {Box, Container, Flex, Text, Badge, Link, Heading, useColorModeValue, useColorMode} from "@chakra-ui/react"
-import Image from 'next/image'
+import {Box, Container, Flex, Text, Badge, Link, Heading, useColorModeValue, useColorMode, Image} from "@chakra-ui/react"
 import {FiGithub} from 'react-icons/fi'
 import {Icon} from '@chakra-ui/react'
 import {ExternalLinkIcon} from '@chakra-ui/icons'
@@ -36,20 +35,26 @@ const ReverseProject = (props) =>{
               align="center" 
               mb={"120px"} 
         >
-            
-            <Box as={motion.div} 
-                 initial={{opacity:0 , x:20}} 
-                 animate={imageAnimation}  
-                 boxShadow="base" 
-                 backgroundColor={useColorModeValue("#FFCF07", '#06fdd8')} 
-                 _hover={{backgroundColor:"none"}} 
-                 className={styles.projectImageContainer}
-            >
-                <Image src={props.projectImage} height="500px" width="400px" className={styles.projectImage} />
-            </Box>
+            <Link href={props.demoLink ? props.demoLink : props.githubLink} isExternal>
+                <Box as={motion.div} 
+                    initial={{opacity:0 , x:20}} 
+                    animate={imageAnimation}  
+                    whileHover={{scale:1.01}}
+                    rounded="md"
+                    boxShadow={{base:"dark-lg", md:"base"}}  
+                    backgroundColor={useColorModeValue("#FFCF07", '#06fdd8')} 
+                    background={useColorModeValue("linear-gradient(0.4turn, #fcc404, #fcc917)", "linear-gradient(0.4turn, #06fdd8, #06fdf1)")}
+                    _hover={{md:{backgroundColor:"none", background:"none"}}}
+                    className={styles.projectImageContainer}
+                >
+                    <Image src={props.projectImage} height="500px" width="400px" fit="cover" className={styles.projectImage} />
+                </Box>
+            </Link>
             <Container  textAlign={{base:'center' , md:'end'}} w={{base:'300px' , md:"fit-content"}} className={styles.projectDetails}>
                 <motion.div initial={{opacity:0 , y: 20}} animate={headingAnimation} ref={headingRef}>    
-                    <Heading as="h1" className={styles.projectTitle} mb={3}>{props.projectTitle}</Heading>
+                    <Link href={props.demoLink ? props.demoLink : props.githubLink} _hover={{color:useColorModeValue("#FFCF07", '#06fdd8')}} isExternal>    
+                        <Heading as="h1" className={styles.projectTitle} mb={3}>{props.projectTitle}</Heading>
+                    </Link>
                 </motion.div>
                 <Text  as={motion.div} 
                        initial={{opacity:0 , y:20}} 

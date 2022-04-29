@@ -1,7 +1,18 @@
-import {Box, Container, FormControl, FormLabel, Text, FormErrorMessage, FormHelperText, Input, Textarea,Heading, useColorModeValue} from '@chakra-ui/react'
-
+import {Box, Container, FormControl, FormLabel, Text, FormErrorMessage, FormHelperText, Input, Textarea,Heading, useColorModeValue, Button} from '@chakra-ui/react'
+import { useForm, ValidationError } from '@formspree/react';
 
 const ContactSection = () => {
+
+    const [state, handleSubmit] = useForm("xzbogprv");
+    
+    if(state.succeeded){
+        return(
+            <div>heh, nice one</div>
+        )
+    }
+
+
+
 
     return(
         <Box id="contactSection"
@@ -19,22 +30,22 @@ const ContactSection = () => {
                 <Text fontSize="25px">If you are interested in working with or hiring me, or even just in giving some feedback, feel free to contact me below!</Text>
             </Container>
             <Container>
-                <FormControl>
-                    <Box mb={3}>
-                        <FormLabel htmlFor='email'>Name</FormLabel>
-                        <Input id='email' type='email' borderColor={useColorModeValue("#ff4500" , '#06fdd8')} />
-                        <FormHelperText>(optional)</FormHelperText>
-                    </Box>
-                    <Box mb={3}>
-                        <FormLabel htmlFor='email'>Email address</FormLabel>
-                        <Input id='email' type='email' borderColor={useColorModeValue("#ff4500" , '#06fdd8')} />
-                        <FormHelperText>(optional)</FormHelperText>
-                    </Box>
-                    <Box mb={3}>
-                        <FormLabel htmlFor='email'>Email address</FormLabel>
-                        <Textarea borderColor={useColorModeValue("#ff4500" , '#06fdd8')}></Textarea>
-                    </Box>
-                </FormControl>
+                <form onSubmit={handleSubmit}>
+                    <FormControl>
+                        <Box mb={3}>
+                            <FormLabel htmlFor='name'>Name</FormLabel>
+                            <Input id='name' type='text' borderColor={useColorModeValue("#ff4500" , '#06fdd8')} />
+                            <FormHelperText>(optional)</FormHelperText>
+                        </Box>
+                        <Box mb={3}>
+                            <FormLabel htmlFor='message'>Message</FormLabel>
+                            <Textarea borderColor={useColorModeValue("#ff4500" , '#06fdd8')} isRequired></Textarea>
+                        </Box>
+                        <Button type="submit" disabled={state.submitting} color="black" backgroundColor={useColorModeValue("#FFCF07", '#06fdd8')}>
+                            Submit
+                        </Button>
+                    </FormControl>
+                </form>
             </Container>
         </Box>
     )

@@ -1,14 +1,11 @@
 .projectImageContainer{
     z-index: 1;
-    margin-bottom: 3%;
+    display: flex;
     flex-shrink:0;
     position: relative;
+    min-width: 400px;
     /* background-color: #fcc404;
     background: linear-gradient(0.4turn, #fcc404, #fcc917); */
-}
-.projectImageContainer:hover{
-    background-color:none;
-    background: none;
 }
 
 
@@ -19,12 +16,15 @@
     position: relative;
     height: 100%;
     mix-blend-mode: multiply;
+    display: flex;
+    flex-shrink: 0;
     filter: grayscale(100%) contrast(1);
 }
 
+
 .projectDescription{
     padding:3%;
-    flex-shrink: 0;
+    flex-shrink: 1;
     position: relative;
     z-index: 3;
     line-height: 30px;
@@ -44,8 +44,9 @@
     }
     .projectImageContainer{
         height: 100%;
+        min-width: 0px;
         /* filter: blur(7px); */
-        filter: opacity(25%);
+        filter: opacity(15%) grayscale(100%) blur(5px);
     }
 
     .projectTitle{
@@ -63,5 +64,11 @@
         background-color: transparent;
         max-width: 400px;
 
+    }
+}
+
+@media only screen and (width > 48em){
+    .projectImageContainer:hover .projectImage{
+        filter:none
     }
 }
