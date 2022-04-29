@@ -19,6 +19,7 @@ const projects = [
     {
         projectTitle: "Personal Website v3",
         projectImage: yelpark,
+        githubLink: "https://github.com/PeterCamejo/Personal-Website-v3",
         projectDescription: "My portfolio website, which you are currently on! This is the third iteration and the first to be done with React.",
         badges:["Next.js", "Chakra UI", "Framer Motion", "Varcel"]
     }

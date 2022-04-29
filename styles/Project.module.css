@@ -3,9 +3,12 @@
     margin-bottom: 3%;
     flex-shrink:0;
     position: relative;
-
     /* background-color: #fcc404;
     background: linear-gradient(0.4turn, #fcc404, #fcc917); */
+}
+.projectImageContainer:hover{
+    background-color:none;
+    background: none;
 }
 
 
@@ -14,6 +17,7 @@
     border-radius: 2px;
     z-index:1;
     position: relative;
+    height: 100%;
     mix-blend-mode: multiply;
     filter: grayscale(100%) contrast(1);
 }
@@ -41,10 +45,8 @@
     }
     .projectImageContainer{
         height: 100%;
-        margin:auto;
-        background-color:#fcc40425;
-        background: linear-gradient(0.4turn, #fcc404, #fcc917);
-        opacity:0.25;
+        /* filter: blur(7px); */
+        filter: opacity(25%);
     }
 
     .projectTitle{
@@ -61,6 +63,6 @@
     .projectDescription{
         background-color: transparent;
         max-width: 400px;
-        color:black;
+
     }
 }
