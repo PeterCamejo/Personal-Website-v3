@@ -10,7 +10,7 @@ import ReverseProject from "./ReverseProject"
 const PortfolioSection = () =>{
     const projectHrefs = ["https://github.com/PeterCamejo",
                           "https://codepen.io/TheAlexC",
-                          "https://twitter.com/TheAlexC" //TODO Change to homelab.petercamejo.com
+                          "/homelab" //TODO Change to homelab.petercamejo.com
                           ]
 
 

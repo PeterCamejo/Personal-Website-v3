@@ -17,7 +17,7 @@ const LandingSection = () =>{
             <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:4.1,  duration:0.5}}>
                 <Text fontSize={{base:'20px' , md: "30px"}} w="fit-content" color="black" p={3} mb={3} rounded="lg" backgroundColor={useColorModeValue("#FFCF07", '#06fdd8')}>A full stack developer based in Atlanta, GA</Text>
                 <Text w="100%" fontSize={{base:"16px" , md: "25px"}}>I am a highly motivated full-stack developer actively seeking employment in web development remotely or in the Atlanta area.
-                    I am always eager to apply my skills and daily studies to web application and software development solutions. I would love nothing more than to work on new and challenging projects with a dedicated and fun-loving team.
+                    Always eager to apply my skills and daily studies to web application and software development solutions, I would love nothing more than to work on new and challenging projects with a dedicated and fun-loving team.
                 </Text>
             </motion.div>
         </Box>

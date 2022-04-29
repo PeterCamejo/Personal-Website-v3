@@ -3,7 +3,7 @@
 const otherProjects = [
     {
         projectTitle: "Github",
-        projectDescription:"My Github profile containing code and miscellaneous projects from my university days.",
+        projectDescription:"My Github profile containing hobby projects and miscellaneous code from my university days.",
         badges:["Java", "C++"]
     },
     {
