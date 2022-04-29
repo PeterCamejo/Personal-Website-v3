@@ -99,7 +99,7 @@ const Project = (props) =>{
                 <Box as={motion.div} 
                      initial={{opacity:0 , x:20}} 
                      animate={imageAnimation} 
-                     boxShadow="base" 
+                     boxShadow={{base:"dark-lg", md:"base"}} 
                      backgroundColor={ useColorModeValue("#FFCF07", '#06fdd8')}
                      background={useColorModeValue("linear-gradient(0.4turn, #fcc404, #fcc917)", "linear-gradient(0.4turn, #06fdd8, #06fdf1)")}
                      className={styles.projectImageContainer} 

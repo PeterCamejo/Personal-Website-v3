@@ -14,7 +14,8 @@ import {
     Heading,
     HStack,
     useColorModeValue,
-    useBreakpointValue
+    useBreakpointValue,
+    textDecoration
   } from '@chakra-ui/react'
 import {HamburgerIcon} from '@chakra-ui/icons'
 import ColorModeButton from './ColorModeButton'
@@ -69,17 +70,19 @@ const Navbar = () =>{
             width="full">
 
             <HStack w="full">
-                <Heading as="h1" w="100%">
-                    <motion.div width="100%"  initial={{opacity:0, x: -20}} animate={{opacity:[0,1], x:[-20,0]}} transition={{delay:0.3, ease: 'easeIn' , duration:0.5}}>
-                        {navLogo}
-                    </motion.div>
-                </Heading>
+                <Link  w="100%" href="/" _hover={{textDecoration:"none"}}>
+                    <Heading as="h1" w="100%">
+                        <motion.div  whileHover={{y:-5}}  initial={{opacity:0, x: -20}} animate={{opacity:[0,1], x:[-20,0]}} transition={{delay:0.3, ease: 'easeIn', duration:0.2}}>
+                            {navLogo}
+                        </motion.div>
+                    </Heading>
+                </Link>
                 <Container textAlign="right">
                     <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:0.8, type:'spring', bounce:2, duration:0.5}}>
                         <ColorModeButton />
                     </motion.div>
                 </Container>
-                <HStack  display={{base:"none", md:"flex"}} justifyContent="space-between" fontSize='25px' pr='60px'>
+                <HStack  display={{base:"none", md:"flex"}} alignItems="end" justifyContent="space-between" fontSize='25px' pr='60px'>
                     <Link as={motion.a} href="#landingSection" whileHover={{y:-5}}   _hover={{textDecoration:"none"}}>
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1, type:'spring', bounce:2, duration:0.5}}>
                             Introduction
@@ -107,16 +110,18 @@ const Navbar = () =>{
                     <motion.div initial={{opacity:0, y:20}} 
                                 animate={{opacity:[0,1], y:[20,0]}} 
                                 transition={{delay:1.2, type:'spring', bounce:1, duration:0.5}}
-                                >
+                    >
                         <Menu>
-                            <MenuButton
-                                display={{base:"flex", md:"none"}}
-                                as={IconButton}
-                                aria-label='Options'
-                                icon={<HamburgerIcon />}
-                                variant='outline'
-                                size="lg"
-                            />
+                            <motion.div whileHover={{scale: 1.2}}>
+                                <MenuButton
+                                    display={{base:"flex", md:"none"}}
+                                    as={IconButton}
+                                    aria-label='Options'
+                                    icon={<HamburgerIcon />}
+                                    variant='outline'
+                                    size="lg"
+                                />
+                            </motion.div>
                             <MenuList backgroundColor={useColorModeValue('#f58c0090','#03002e90')}>
                                 <Link href="#landingSection" _hover={{textDecoration:"none"}}>
                                     <MenuItem>
