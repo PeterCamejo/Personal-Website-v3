@@ -10,6 +10,9 @@ const OtherProject = (props) =>{
     const boxAnimation = useAnimation();
     const [boxRef,  boxInView] = useInView();
 
+    const bgColor = useColorModeValue("#ff531490" , '#09008890');
+    const badgeColor = useColorModeValue("#FFCF07" , '#06fdd8');
+
     useEffect(()=>{
         if(boxInView){
             boxAnimation.start({opacity: 1 , y: 0 , transition:{delay: 0.5 + (props.projectIndex * 0.3)}});
@@ -25,7 +28,7 @@ const OtherProject = (props) =>{
                 display="flex" 
                 alignItems="center" 
                 rounded="lg" 
-                backgroundColor={useColorModeValue("#ff531490" , '#09008890')} 
+                backgroundColor={bgColor} 
                 boxShadow="base"  
                 h={{base:"300px", xl:"400px"}}
                 mb={{base:'30px' , xl:0}}
@@ -40,7 +43,7 @@ const OtherProject = (props) =>{
                         return(
                         <Badge boxShadow="lg" 
                                mr={2}
-                               backgroundColor={useColorModeValue("#FFCF07" , '#06fdd8')} 
+                               backgroundColor={badgeColor} 
                                color="black"  
                                key={index}>
                                    {badge}
