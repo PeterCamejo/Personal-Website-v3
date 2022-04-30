@@ -5,7 +5,7 @@ const projects = [
         projectImage: "../yelpark.png",
         demoLink:"https://obscure-stream-21690.herokuapp.com/",
         githubLink:"https://github.com/PeterCamejo/Yelpark",
-        projectDescription:"A demo full stack application built on the MEN stack, Yelpark is meant to function identically to Yelp, but is specifically for finding, rating, and reviewing parks.",
+        projectDescription:"A demo full stack application, Yelpark is meant to function identically to Yelp, but is specifically for finding, rating, and reviewing parks.",
         badges: ["bootstrap","ejs", "node.js", "express", "mongoDB", "Heroku"]
     },
     {
