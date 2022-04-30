@@ -114,7 +114,12 @@ const Project = (props) =>{
                         className={styles.projectImageContainer} 
                         _hover={{md:{backgroundColor:"none", background:"none"}}} 
                     >
-                        <Image src={props.projectImage} height="500px" width="400px" fit="cover"  className={styles.projectImage} />
+                        <Image src={props.projectImage} 
+                               height="500px" 
+                               width="400px" 
+                               fit="cover"
+                               alt="project screenshot"  
+                               className={styles.projectImage} />
                     </Box>
                 </Link>
 

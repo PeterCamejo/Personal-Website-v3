@@ -16,7 +16,7 @@ const LandingSection = () =>{
         <Box w="4xl" ml={{base:"0", lg:"25%"}}>
             <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:2.5,  duration:0.5}}>  
                 <Text fontSize={{base:'16px' , md: '25px'}}>   
-                    Hi, I'm
+                    Hi, I&apos;m
                 </Text>    
             </motion.div>      
             <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:3.3,  duration:0.5}}>

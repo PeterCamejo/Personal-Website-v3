@@ -47,7 +47,12 @@ const ReverseProject = (props) =>{
                     _hover={{md:{backgroundColor:"none", background:"none"}}}
                     className={styles.projectImageContainer}
                 >
-                    <Image src={props.projectImage} height="500px" width="400px" fit="cover" className={styles.projectImage} />
+                    <Image src={props.projectImage} 
+                           height="500px" 
+                           width="400px" 
+                           fit="cover" 
+                           alt="project screenshot"
+                           className={styles.projectImage} />
                 </Box>
             </Link>
             <Container  textAlign={{base:'center' , md:'end'}} w={{base:'300px' , md:"fit-content"}} className={styles.projectDetails}>
