@@ -134,7 +134,9 @@ const Navbar = () =>{
                                     size="lg"
                                 />
                             </motion.div>
-                            <MenuList backgroundColor={useColorModeValue('#f58c0095','#03002e95')}>
+                            <MenuList backgroundColor={useColorModeValue('#f58c0099','#03002e99')}
+                                      style={{backdropFilter: 'blur(10px)'}}
+                            >
                                 <Link href="#landingSection" _hover={{textDecoration:"none"}}>
                                     <MenuItem>
                                     Introduction
