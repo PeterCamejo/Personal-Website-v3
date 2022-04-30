@@ -56,7 +56,7 @@ const Navbar = () =>{
             variants={variants}
             display="flex"
             boxShadow={useColorModeValue("lg" , "dark-lg")}
-            p={2}
+            p={3}
             flexDir="row" 
             style={{backdropFilter: 'blur(10px)'}}
             top={0} 
@@ -65,13 +65,15 @@ const Navbar = () =>{
             width="full">
 
             <HStack w="full">
-                <Link  w="100%" href="/" _hover={{textDecoration:"none"}}>
-                    <Heading as="h1" w="100%">
-                        <motion.div  whileHover={{y:-5}}  initial={{opacity:0, x: -20}} animate={{opacity:[0,1], x:[-20,0]}} transition={{delay:0.3, ease: 'easeIn', duration:0.2}}>
-                            {navLogo}
-                        </motion.div>
-                    </Heading>
-                </Link>
+                <Box display="flex" justifyContent="start" alignItems="start" textAlign="left" w="100%">
+                    <Link  href="/" _hover={{textDecoration:"none"}}>
+                        <Heading as="h1" w="100%">
+                            <motion.div  whileHover={{y:-5}}  initial={{opacity:0, x: -20}} animate={{opacity:[0,1], x:[-20,0]}} transition={{delay:0.3, ease: 'easeIn', duration:0.2}}>
+                                {navLogo}
+                            </motion.div>
+                        </Heading>
+                    </Link>
+                </Box>
                 <Container textAlign="right">
                     <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:0.8, type:'spring', bounce:2, duration:0.5}}>
                         <ColorModeButton />

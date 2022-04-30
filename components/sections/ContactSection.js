@@ -17,7 +17,7 @@ const ContactSection = () => {
         >
             <Container mb={8}>
                 <Heading as="h1" mb={5}>Thanks for stopping by!</Heading>
-                <Text fontSize="25px">If you are interested in working with or hiring me, or even just in giving some feedback, feel free to contact me below!</Text>
+                <Text fontSize={{base:"20px", md:"25px"}}>If you are interested in working with or hiring me, or even just in giving some feedback, feel free to contact me below!</Text>
             </Container>
             <Container display='flex' flexDir="column">
                 <ContactForm />
