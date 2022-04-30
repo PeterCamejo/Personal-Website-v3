@@ -20,7 +20,7 @@ const projects = [
         projectImage: "../PACv3.png",
         githubLink: "https://github.com/PeterCamejo/Personal-Website-v3",
         projectDescription: "My portfolio website, which you are currently on! This is the third iteration and the first to be done with React.",
-        badges:["Next.js", "Chakra UI", "Framer Motion", "Varcel"]
+        badges:["Next.js", "Chakra UI", "Framer Motion", "Vercel"]
     }
 ]
 
