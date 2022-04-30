@@ -4,8 +4,6 @@
     flex-shrink:0;
     position: relative;
     min-width: 400px;
-    /* background-color: #fcc404;
-    background: linear-gradient(0.4turn, #fcc404, #fcc917); */
 }
 
 
@@ -45,7 +43,6 @@
     .projectImageContainer{
         height: 100%;
         min-width: 0px;
-        /* filter: blur(7px); */
         filter: opacity(15%) grayscale(100%) blur(5px);
     }
 

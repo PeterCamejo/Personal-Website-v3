@@ -3,10 +3,6 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
     Link,
     Box,
     Container,
@@ -15,11 +11,10 @@ import {
     HStack,
     useColorModeValue,
     useBreakpointValue,
-    textDecoration
   } from '@chakra-ui/react'
 import {HamburgerIcon} from '@chakra-ui/icons'
 import ColorModeButton from './ColorModeButton'
-import { AnimatePresence, motion, useViewportScroll } from 'framer-motion'
+import {motion, useViewportScroll } from 'framer-motion'
 import React, {useState, useEffect} from 'react'
 
 const Navbar = () =>{
@@ -27,7 +22,7 @@ const Navbar = () =>{
 
     const variants = {
         visible:{opacity: 1, y: 0},
-        hidden:{opacity: 1, y:-100}
+        hidden:{opacity: 0, y:-100}
     }
 
     const [visible , setVisible] = useState(true);
@@ -82,8 +77,17 @@ const Navbar = () =>{
                         <ColorModeButton />
                     </motion.div>
                 </Container>
-                <HStack  display={{base:"none", md:"flex"}} alignItems="end" justifyContent="space-between" fontSize='25px' pr='60px'>
-                    <Link as={motion.a} href="#landingSection" whileHover={{y:-5}}   _hover={{textDecoration:"none"}}>
+                <HStack  display={{base:"none", md:"flex"}} 
+                         alignItems="end" 
+                         justifyContent="space-between" 
+                         fontSize='25px' 
+                         pr='60px'
+                >
+                    <Link as={motion.a} 
+                          href="#landingSection" 
+                          whileHover={{y:-5}}   
+                          _hover={{textDecoration:"none"}}
+                    >
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1, type:'spring', bounce:2, duration:0.5}}>
                             Introduction
                         </motion.div>
@@ -91,7 +95,11 @@ const Navbar = () =>{
 
                     <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1, type:'spring', bounce:2, duration:0.5}}>/</motion.div>
                     
-                    <Link  as={motion.a} href="#portfolioSection" whileHover={{y:-5}}   _hover={{textDecoration:"none"}}>
+                    <Link  as={motion.a} 
+                          href="#portfolioSection" 
+                          whileHover={{y:-5}}   
+                          _hover={{textDecoration:"none"}}
+                    >
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1.3, type:'spring', bounce:1, duration:0.5}}>
                             Projects
                         </motion.div>
@@ -100,7 +108,11 @@ const Navbar = () =>{
                     
                     <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1.3, type:'spring', bounce:2, duration:0.5}}>/</motion.div>
                     
-                    <Link as={motion.a} href="#contactSection" whileHover={{y:-5}}   _hover={{textDecoration:"none"}}>
+                    <Link as={motion.a} 
+                          href="#contactSection" 
+                          whileHover={{y:-5}}   
+                          _hover={{textDecoration:"none"}}
+                    >
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1.6, type:'spring', bounce:1, duration:0.5}}>
                             Contact
                         </motion.div>
@@ -122,7 +134,7 @@ const Navbar = () =>{
                                     size="lg"
                                 />
                             </motion.div>
-                            <MenuList backgroundColor={useColorModeValue('#f58c0090','#03002e90')}>
+                            <MenuList backgroundColor={useColorModeValue('#f58c0095','#03002e95')}>
                                 <Link href="#landingSection" _hover={{textDecoration:"none"}}>
                                     <MenuItem>
                                     Introduction

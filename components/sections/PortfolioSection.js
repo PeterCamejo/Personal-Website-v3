@@ -1,10 +1,11 @@
-import Project from "./Project"
-import projects from "../public/data/projects"
-import otherProjects from "../public/data/otherProjects"
+import Project from "../projects/Project"
+import OtherProject from "../projects/OtherProject"
+import ReverseProject from "../projects/ReverseProject"
+import projects from "../../public/data/projects"
+import otherProjects from "../../public/data/otherProjects"
 import {motion} from "framer-motion"
-import { Box, Text, Center, Stack, Heading, useColorModeValue} from "@chakra-ui/react"
-import OtherProject from "./OtherProject"
-import ReverseProject from "./ReverseProject"
+import { Box, Center, Stack, Heading, useColorModeValue} from "@chakra-ui/react"
+
 
 
 const PortfolioSection = () =>{
@@ -50,7 +51,6 @@ const PortfolioSection = () =>{
             }
           })
           }
-          {/* //h={{base:"100vh", xl:"auto"}}  */}
             <Heading as="h1" w="100%" textAlign="center" mb={10}>Other Projects and Code</Heading>
             <Stack h="auto"
                    w={{xl:"70%"}}  
@@ -72,8 +72,6 @@ const PortfolioSection = () =>{
                 )
               })
               }
-
-
             </Stack>
         </Center>
   )

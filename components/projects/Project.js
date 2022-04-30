@@ -1,11 +1,11 @@
-import styles from '../styles/Project.module.css'
-import {Box, Container, Flex, Text, Badge, Link, Heading, useColorModeValue, useColorMode, Image, HStack} from "@chakra-ui/react"
-import {FiGithub} from 'react-icons/fi'
-import {Icon} from '@chakra-ui/react'
-import {ExternalLinkIcon} from '@chakra-ui/icons'
-import { motion, useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
+import styles from '../../styles/Project.module.css'
+import { motion, useAnimation } from 'framer-motion'
+import {Icon} from '@chakra-ui/react'
+import {FiGithub} from 'react-icons/fi'
+import {ExternalLinkIcon} from '@chakra-ui/icons'
+import {Box, Container, Flex, Text, Badge, Link, Heading, useColorModeValue, useColorMode, Image, HStack} from "@chakra-ui/react"
 
 
 const Project = (props) =>{
@@ -30,14 +30,19 @@ const Project = (props) =>{
     return(
         <Flex className={styles.projectContainer} 
               direction={{base:"column", md:"row"}}
-            //   justify={{base:"end", md:"center"}} 
               justify="center"
               align="center" 
               mb={"120px"} 
         >
-            <Container className={styles.projectDetails} align={{base:'center' , md:'start'}} w={{base:'300px' , md:"fit-content"}}>
+            <Container className={styles.projectDetails} 
+                       align={{base:'center' , md:'start'}} 
+                       w={{base:'300px' , md:"fit-content"}}
+            >
                 <motion.div initial={{opacity:0 , y: 20}} animate={headingAnimation} ref={headingRef}>
-                    <Link href={props.demoLink ? props.demoLink : props.githubLink} _hover={{color:useColorModeValue("#FFCF07", '#06fdd8')}} isExternal>
+                    <Link href={props.demoLink ? props.demoLink : props.githubLink} 
+                          _hover={{color:useColorModeValue("#FFCF07", '#06fdd8')}} 
+                          isExternal
+                    >
                         <Heading as="h1" className={styles.projectTitle} mb={3}>{props.projectTitle}</Heading>
                     </Link>
                 </motion.div>    

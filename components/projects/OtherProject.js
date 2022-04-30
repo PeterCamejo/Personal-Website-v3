@@ -1,8 +1,8 @@
-import { Container,Badge, Text, Heading, Box, useColorModeValue, Link, textDecoration, HStack } from "@chakra-ui/react"
-import { motion, useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
+import { motion, useAnimation } from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 import { ExternalLinkIcon } from "@chakra-ui/icons"
+import { Container,Badge, Text, Heading, Box, useColorModeValue, Link, HStack} from "@chakra-ui/react"
 
 //TODO Take framer motion whileHover out of portfolio section code and place directly in this component instead.
 
@@ -38,7 +38,13 @@ const OtherProject = (props) =>{
                     <Text fontSize="20px" color="antiquewhite">{props.projectDescription}</Text>
                     {props.badges.map((badge, index) => {
                         return(
-                        <Badge boxShadow="lg" mr={2} backgroundColor={useColorModeValue("#FFCF07" , '#06fdd8')} color="black"  key={index}>{badge}</Badge>
+                        <Badge boxShadow="lg" 
+                               mr={2}
+                               backgroundColor={useColorModeValue("#FFCF07" , '#06fdd8')} 
+                               color="black"  
+                               key={index}>
+                                   {badge}
+                        </Badge>
                         )
                         })
                     }
