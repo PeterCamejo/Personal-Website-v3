@@ -13,8 +13,6 @@ const PortfolioSection = () =>{
                           "https://codepen.io/TheAlexC",
                           "/homelab" //TODO Change to homelab.petercamejo.com
                           ]
-
-
     return (
         <Center id="portfolioSection" 
                 h="100%" 
@@ -60,11 +58,10 @@ const PortfolioSection = () =>{
             >
               {otherProjects.map((project, index)=>{
                 return (
-                  <Box as={motion.div} whileHover={{y:-10, x:-5}}>
+                  <Box as={motion.div} key={index} whileHover={{y:-10, x:-5}}>
                     <OtherProject projectTitle={project.projectTitle}
                                   projectDescription={project.projectDescription}
                                   badges={project.badges}
-                                  key={index}
                                   projectIndex={index}
                                   projectHref={projectHrefs[index]}
                     />

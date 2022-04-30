@@ -17,6 +17,8 @@ const ReverseProject = (props) =>{
 
     const {colorMode} = useColorMode();
     const bg = colorMode === 'light' ? "#ff5314" : '#090088';
+    const secondaryColor = useColorModeValue("#FFCF07" , '#06fdd8');
+    const imageBG = useColorModeValue("linear-gradient(0.4turn, #fcc404, #fcc917)", "linear-gradient(0.4turn, #06fdd8, #06fdf1)");
 
     useEffect(()=>{
         if(headingInView){
@@ -42,8 +44,8 @@ const ReverseProject = (props) =>{
                     whileHover={{scale:1.01}}
                     rounded="md"
                     boxShadow={{base:"dark-lg", md:"base"}}  
-                    backgroundColor={useColorModeValue("#FFCF07", '#06fdd8')} 
-                    background={useColorModeValue("linear-gradient(0.4turn, #fcc404, #fcc917)", "linear-gradient(0.4turn, #06fdd8, #06fdf1)")}
+                    backgroundColor={secondaryColor} 
+                    background={imageBG}
                     _hover={{md:{backgroundColor:"none", background:"none"}}}
                     className={styles.projectImageContainer}
                 >
@@ -58,7 +60,7 @@ const ReverseProject = (props) =>{
             <Container  textAlign={{base:'center' , md:'end'}} w={{base:'300px' , md:"fit-content"}} className={styles.projectDetails}>
                 <motion.div initial={{opacity:0 , y: 20}} animate={headingAnimation} ref={headingRef}>    
                     <Link href={props.demoLink ? props.demoLink : props.githubLink} 
-                          _hover={{color:useColorModeValue("#FFCF07", '#06fdd8')}} 
+                          _hover={{color:secondaryColor}} 
                           isExternal
                     >
                         <Heading as="h1" className={styles.projectTitle} mb={3}>{props.projectTitle}</Heading>
@@ -87,7 +89,7 @@ const ReverseProject = (props) =>{
                                className="badge" 
                                mr={2}
                                fontSize={{base:'11px', md:'13px'}}
-                               backgroundColor={useColorModeValue("#FFCF07" , '#06fdd8')} 
+                               backgroundColor={secondaryColor} 
                                color="black" 
                                float={{base:"left", md:"none"}} 
                                mt={{base:2,md:0}} 

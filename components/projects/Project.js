@@ -17,6 +17,10 @@ const Project = (props) =>{
     
     const {colorMode} = useColorMode();
     const bg = colorMode === 'light' ? "#ff5314" : '#090088';
+    const imageBgColor = useColorModeValue("#FFCF07", '#06fdd8');
+    const imageBg = useColorModeValue("linear-gradient(0.4turn, #fcc404, #fcc917)", "linear-gradient(0.4turn, #06fdd8, #06fdf1)");
+    const badgeColor = useColorModeValue("#FFCF07", '#06fdd8');
+    const headingColor = useColorModeValue("#FFCF07", '#06fdd8');
 
     useEffect(()=>{
         if(headingInView){
@@ -40,7 +44,7 @@ const Project = (props) =>{
             >
                 <motion.div initial={{opacity:0 , y: 20}} animate={headingAnimation} ref={headingRef}>
                     <Link href={props.demoLink ? props.demoLink : props.githubLink} 
-                          _hover={{color:useColorModeValue("#FFCF07", '#06fdd8')}} 
+                          _hover={{color:headingColor}} 
                           isExternal
                     >
                         <Heading as="h1" className={styles.projectTitle} mb={3}>{props.projectTitle}</Heading>
@@ -68,7 +72,7 @@ const Project = (props) =>{
                                className="badge" 
                                mr={2} 
                                fontSize={{base:'11px', md:'13px'}}
-                               backgroundColor={useColorModeValue("#FFCF07", '#06fdd8')} 
+                               backgroundColor={badgeColor} 
                                color="black" 
                                key={index}
                         >
@@ -109,8 +113,8 @@ const Project = (props) =>{
                         whileHover={{scale:1.01}}
                         rounded="md" 
                         boxShadow={{base:"dark-lg", md:"base"}} 
-                        backgroundColor={ useColorModeValue("#FFCF07", '#06fdd8')}
-                        background={useColorModeValue("linear-gradient(0.4turn, #fcc404, #fcc917)", "linear-gradient(0.4turn, #06fdd8, #06fdf1)")}
+                        backgroundColor={ imageBgColor}
+                        background={imageBg}
                         className={styles.projectImageContainer} 
                         _hover={{md:{backgroundColor:"none", background:"none"}}} 
                     >
