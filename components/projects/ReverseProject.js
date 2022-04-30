@@ -27,7 +27,7 @@ const ReverseProject = (props) =>{
             descriptionAnimation.start({opacity:1 , y: 0, transition:{delay:0.8, ease:'easeIn', duration: 0.5}});
             badgeAnimation.start( i => ({opacity:1 , y: 0 , transition:{delay: 1 + (i * 0.2)}}));
         }
-    }, [headingAnimation, headingInView]);
+    }, [headingAnimation, imageAnimation, descriptionAnimation, badgeAnimation, headingInView]);
 
 
     return(

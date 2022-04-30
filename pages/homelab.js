@@ -8,7 +8,7 @@ export default function Homelab(){
                <Heading as="h1"> Hey there! This page is a work in progress while I focus on finding a job. </Heading>
                <Text> For now, here are some pics and specs</Text>
                <Text> Intro: &quot;Starting out running dedicated servers for myself and gaming friends, my homelab quickly grew to be one of my most beloved projects&quot;</Text>
-               <Image></Image>
+               <Image alt="Picture of a desktop server"></Image>
                <UnorderedList>
                    <ListItem>CPU/Motherboard</ListItem>
                    <ListItem>32GB RAM</ListItem>

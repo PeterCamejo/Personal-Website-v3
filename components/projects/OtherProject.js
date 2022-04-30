@@ -17,7 +17,7 @@ const OtherProject = (props) =>{
         if(boxInView){
             boxAnimation.start({opacity: 1 , y: 0 , transition:{delay: 0.5 + (props.projectIndex * 0.3)}});
         }
-    } , [boxAnimation, boxInView]);
+    } , [boxAnimation, props.projectIndex, boxInView]);
 
     return(
         <Link href={props.projectHref} _hover={{textDecoration:"none"}} isExternal>
