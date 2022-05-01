@@ -3,7 +3,7 @@ import LandingSection from "../components/sections/LandingSection"
 import ContactSection from "../components/sections/ContactSection"
 import Navbar from "../components/Navbar"
 import SocialLinks from "../components/SocialLinks"
-import MobileSocialLinks from "../components/MobileSocialLinks"
+import SiteHead from '../components/SiteHead'
 import {Box, useColorModeValue} from "@chakra-ui/react"
 
 export default function Website() {
@@ -11,6 +11,7 @@ export default function Website() {
   
   return (
     <Box h="100%" w='100%' backgroundColor={bgColor}>
+      <SiteHead />
       <Navbar />
       <Box>
         <LandingSection />
