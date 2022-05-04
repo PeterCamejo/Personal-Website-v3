@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
 import styles from '../../styles/Project.module.css'
 import { motion, useAnimation } from 'framer-motion'
-import {Icon} from '@chakra-ui/react'
+import {HStack, Icon} from '@chakra-ui/react'
 import {FiGithub} from 'react-icons/fi'
 import {ExternalLinkIcon} from '@chakra-ui/icons'
 import {Box, Container, Flex, Text, Badge, Link, Heading, useColorModeValue, useColorMode, Image} from "@chakra-ui/react"
@@ -99,24 +99,26 @@ const ReverseProject = (props) =>{
                         </Badge>
                     )
                 })}
-                {props.githubLink ? 
-                    <Link as={motion.a} 
-                          initial={{opacity:0 , y:20}} 
-                          animate={descriptionAnimation} 
-                          whileHover={{scale:1.2}} 
-                          href={props.githubLink} 
-                          float={{base:"right",md:"left"}} 
-                          mt={1} isExternal><Icon as={FiGithub} boxSize={6} ></Icon>
-                    </Link> : null}
-                { props.demoLink ? 
-                    <Link href={props.demoLink} 
-                          as={motion.a} 
-                          initial={{opacity:0 , y:20}} 
-                          animate={descriptionAnimation}  
-                          whileHover={{scale:1.2}} 
-                          float="right" mr={2} 
-                          isExternal><ExternalLinkIcon boxSize={6}></ExternalLinkIcon>
-                    </Link> : null}
+                <HStack>
+                    {props.githubLink ? 
+                        <Link as={motion.a} 
+                            initial={{opacity:0 , y:20}} 
+                            animate={descriptionAnimation} 
+                            whileHover={{scale:1.2}} 
+                            href={props.githubLink} 
+                            float={{base:"right",md:"left"}} 
+                            mt={1} isExternal><Icon as={FiGithub} boxSize={6} ></Icon>
+                        </Link> : null}
+                    { props.demoLink ? 
+                        <Link href={props.demoLink} 
+                            as={motion.a} 
+                            initial={{opacity:0 , y:20}} 
+                            animate={descriptionAnimation}  
+                            whileHover={{scale:1.2}} 
+                            float="right" mr={2} 
+                            isExternal><ExternalLinkIcon boxSize={6}></ExternalLinkIcon>
+                        </Link> : null}
+                </HStack>
             </Container>    
         </Flex>
         )
