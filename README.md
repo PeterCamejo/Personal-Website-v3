@@ -1,6 +1,7 @@
 //Portfolio section and social media links are heavily inspired by https://brittanychiang.com
+
 //Next.js + ChakraUI + Framer Motion stack idea from https://www.craftz.dog/
-//Using Formspree for contact form functionality
+
 //Deployed with Varcel
 
 Previous versions: [v1](https://codepen.io/TheAlexC/pen/LGYzVY), [v2](https://github.com/PeterCamejo/petercamejo.github.io)

@@ -14,12 +14,12 @@ const LandingSection = () =>{
          alignItems="center" 
     >
         <Box w="4xl" ml={{base:"0", lg:"25%"}}>
-         /* <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:2.5,  duration:0.5}}>  
+         {/* <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:2.5,  duration:0.5}}>  
                 <Text fontSize={{base:'16px' , md: '25px'}}>   
                     Hi, I&apos;m
                 </Text>    
             </motion.div>  
-        */    
+        */}    
             <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:2.5,  duration:0.5}}>
                 <Heading as="h1" size="4xl" mb={5} >Peter Camejo</Heading>
             </motion.div>
