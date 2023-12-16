@@ -32,10 +32,10 @@ const LandingSection = () =>{
                       rounded="lg" 
                       backgroundColor={useColorModeValue("#FFCF07", '#06fdd8')}
                 >
-                    A full stack developer based in Atlanta, GA
+                    An information security professional based in Atlanta, GA
                 </Text>
-                <Text w="100%" fontSize={{base:"16px" , md: "25px"}}>I am a highly motivated full-stack developer actively seeking employment in web development remotely or in the Atlanta area.
-                    Always eager to apply my skills and daily studies to web application and software development solutions, I would love nothing more than to work on new and challenging projects with a dedicated and fun-loving team.
+                <Text w="100%" fontSize={{base:"16px" , md: "25px"}}>I am a highly driven, Security+ certified information security professional actively seeking employment in cybersecurity remotely or in the Atlanta area.
+                    Always eager to apply my skills, daily studies, and free time to all things infosec, I would love nothing more than to work on new and testing challenges with a dedicated and improvment-focused team.
                 </Text>
             </motion.div>
         </Box>
