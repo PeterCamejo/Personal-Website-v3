@@ -11,7 +11,7 @@ const ContactSection = () => {
              justifyContent="center" 
              p={"30px"}
              alignItems="center"
-             h="100vh" 
+             h="50vh" 
              w="100%" 
              backgroundColor={useColorModeValue('#f58c00', '#03002e' )}
         >
