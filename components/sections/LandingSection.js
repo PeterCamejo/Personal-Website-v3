@@ -20,10 +20,10 @@ const LandingSection = () =>{
                 </Text>    
             </motion.div>  
         */}    
-            <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:2.5,  duration:0.5}}>
+            <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:2.0,  duration:0.5}}>
                 <Heading as="h1" size="4xl" mb={5} >Peter Camejo</Heading>
             </motion.div>
-            <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:3.3,  duration:0.5}}>
+            <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:3.0,  duration:0.5}}>
                 <Text fontSize={{base:'20px' , md: "30px"}} 
                       w="fit-content" 
                       color="black" 
