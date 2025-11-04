@@ -11,7 +11,7 @@ import { Box, Center, Stack, Heading, useColorModeValue} from "@chakra-ui/react"
 const PortfolioSection = () =>{
     const projectHrefs = ["https://leetcode.com/u/PeterCamejo/",
                           "https://codepen.io/TheAlexC",
-                          "https://petercamejo.hashnode.dev"
+                          "https://hashnode.com/@petercamejo"
                           ]
     return (
         <Center id="portfolioSection" 
