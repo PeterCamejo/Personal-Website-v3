@@ -9,9 +9,9 @@ import { Box, Center, Stack, Heading, useColorModeValue} from "@chakra-ui/react"
 
 
 const PortfolioSection = () =>{
-    const projectHrefs = ["https://github.com/PeterCamejo",
+    const projectHrefs = ["https://leetcode.com/u/PeterCamejo/",
                           "https://codepen.io/TheAlexC",
-                          "/homelab" //TODO Change to homelab.petercamejo.com
+                          "https://petercamejo.hashnode.dev"
                           ]
     return (
         <Center id="portfolioSection" 
@@ -21,7 +21,7 @@ const PortfolioSection = () =>{
                 p={"60px"} 
                 mt={{base:"100px", md:0}} 
                 flexDir="column"  
-                backgroundColor={useColorModeValue('#f58c00', '#03002e' )}  >
+                backgroundColor={useColorModeValue('#FF8C42', '#1A2C42' )}  >
 
           {projects.map((project, index)=>{
             if(index % 2 !== 0){

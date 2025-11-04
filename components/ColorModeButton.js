@@ -9,6 +9,7 @@ const ColorModeButton  = () =>{
     return(
             <AnimatePresence initial={false} exitBeforeEnter>
                     <IconButton icon={<Icon as={useColorModeValue(FaRegSnowflake , FaSun)} />}
+                                aria-label='Light/Dark Mode'
                                 as={motion.button}
                                 initial={{y:-20, opacity:0}} 
                                 animate={{y:0, opacity:1}} 
@@ -18,9 +19,9 @@ const ColorModeButton  = () =>{
                                 onClick={toggleColorMode}
                                 size="lg"
                                 fontSize="3xl"
-                                color={useColorModeValue('#f58c00', '#03002e' )}
+                                color={useColorModeValue('#FF8C42', '#1A2C42' )}
                                 boxShadow={useColorModeValue("lg","dark-lg")}
-                                backgroundColor ={useColorModeValue('#03002e', '#f58c00' )}
+                                backgroundColor ={useColorModeValue('#1A2C42', '#FF8C42' )}
                                 _hover={{backgroundColor : bg}}></IconButton>
             </AnimatePresence>
     )

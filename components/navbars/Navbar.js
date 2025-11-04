@@ -13,11 +13,11 @@ import {
     useBreakpointValue,
   } from '@chakra-ui/react'
 import {HamburgerIcon} from '@chakra-ui/icons'
-import ColorModeButton from './ColorModeButton'
+import ColorModeButton from '../ColorModeButton'
 import {motion, useViewportScroll } from 'framer-motion'
 import React, {useState, useEffect} from 'react'
 
-const Navbar = () =>{
+const Navbar = (props) =>{
     const navLogo = useBreakpointValue({base:'PC' , md: 'Peter Camejo'});
 
     const variants = {
@@ -46,8 +46,6 @@ const Navbar = () =>{
     });
 
 
-    
-
     return(
         <Box position="fixed" 
             as={motion.nav} 
@@ -61,7 +59,7 @@ const Navbar = () =>{
             style={{backdropFilter: 'blur(10px)'}}
             top={0} 
             zIndex={5} 
-            backgroundColor={useColorModeValue('#f58c0090','#03002e90')} 
+            backgroundColor={useColorModeValue('#FF8C42','#1A2C42')} 
             width="full">
 
             <HStack w="full">
@@ -80,15 +78,15 @@ const Navbar = () =>{
                     </motion.div>
                 </Container>
                 <HStack  display={{base:"none", md:"flex"}} 
-                         alignItems="end" 
-                         justifyContent="space-between" 
-                         fontSize='25px' 
-                         pr='60px'
+                        alignItems="end" 
+                        justifyContent="space-between" 
+                        fontSize='25px' 
+                        pr='60px'
                 >
                     <Link as={motion.a} 
-                          href="#landingSection" 
-                          whileHover={{y:-5}}   
-                          _hover={{textDecoration:"none"}}
+                        href="#landingSection" 
+                        whileHover={{y:-5}}   
+                        _hover={{textDecoration:"none"}}
                     >
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1, type:'spring', bounce:2, duration:0.5}}>
                             Introduction
@@ -98,9 +96,9 @@ const Navbar = () =>{
                     <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1, type:'spring', bounce:2, duration:0.5}}>/</motion.div>
                     
                     <Link  as={motion.a} 
-                          href="#portfolioSection" 
-                          whileHover={{y:-5}}   
-                          _hover={{textDecoration:"none"}}
+                        href="#portfolioSection" 
+                        whileHover={{y:-5}}   
+                        _hover={{textDecoration:"none"}}
                     >
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1.3, type:'spring', bounce:1, duration:0.5}}>
                             Projects
@@ -111,9 +109,9 @@ const Navbar = () =>{
                     <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1.3, type:'spring', bounce:2, duration:0.5}}>/</motion.div>
                     
                     <Link as={motion.a} 
-                          href="#contactSection" 
-                          whileHover={{y:-5}}   
-                          _hover={{textDecoration:"none"}}
+                        href="#contactSection" 
+                        whileHover={{y:-5}}   
+                        _hover={{textDecoration:"none"}}
                     >
                         <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1.6, type:'spring', bounce:1, duration:0.5}}>
                             Contact
@@ -137,7 +135,7 @@ const Navbar = () =>{
                                 />
                             </motion.div>
                             <MenuList backgroundColor={useColorModeValue('#f58c0099','#03002e99')}
-                                      style={{backdropFilter: 'blur(10px)'}}
+                                    style={{backdropFilter: 'blur(10px)'}}
                             >
                                 <Link href="#landingSection" _hover={{textDecoration:"none"}}>
                                     <MenuItem>
@@ -161,6 +159,7 @@ const Navbar = () =>{
             </HStack>    
         </Box>
     )
+
 }
 
 export default Navbar

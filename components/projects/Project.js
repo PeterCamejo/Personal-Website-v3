@@ -16,11 +16,11 @@ const Project = (props) =>{
     const [headingRef, headingInView] = useInView();
     
     const {colorMode} = useColorMode();
-    const bg = colorMode === 'light' ? "#ff5314" : '#090088';
-    const imageBgColor = useColorModeValue("#FFCF07", '#06fdd8');
+    const bg = colorMode === 'light' ? "#ff6128" : '#21159e';
+    const imageBgColor = useColorModeValue('#FFD166', '#B0DFFF');
     const imageBg = useColorModeValue("linear-gradient(0.4turn, #fcc404, #fcc917)", "linear-gradient(0.4turn, #06fdd8, #06fdf1)");
-    const badgeColor = useColorModeValue("#FFCF07", '#06fdd8');
-    const headingColor = useColorModeValue("#FFCF07", '#06fdd8');
+    const badgeColor = useColorModeValue('#FFD166', '#B0DFFF');
+    const headingColor = useColorModeValue('#FFD166', '#B0DFFF');
 
     useEffect(()=>{
         if(headingInView){

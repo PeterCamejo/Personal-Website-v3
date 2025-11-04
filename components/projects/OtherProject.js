@@ -10,8 +10,8 @@ const OtherProject = (props) =>{
     const boxAnimation = useAnimation();
     const [boxRef,  boxInView] = useInView();
 
-    const bgColor = useColorModeValue("#ff531490" , '#09008890');
-    const badgeColor = useColorModeValue("#FFCF07" , '#06fdd8');
+    const bgColor = useColorModeValue("#ff6128" , '#21159e');
+    const badgeColor = useColorModeValue('#FFD166', '#B0DFFF');
 
     useEffect(()=>{
         if(boxInView){

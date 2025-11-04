@@ -13,6 +13,7 @@ const MobileSocialLinks = () => {
                 textAlign="center"
         >
             <Link as={motion.a}  
+                      aria-label="LinkedIn"
                       href="https://www.linkedin.com/in/peter-camejo-908472110/" 
                       whileHover={{scale:1.2}} 
                       isExternal
@@ -20,6 +21,7 @@ const MobileSocialLinks = () => {
                         <Icon as={FaLinkedinIn} boxSize={8} />
                 </Link> 
                 <Link as={motion.a} 
+                      aria-label="Github"
                       href="https://github.com/PeterCamejo" 
                       whileHover={{scale:1.2}} 
                       isExternal
@@ -28,6 +30,7 @@ const MobileSocialLinks = () => {
                 </Link>
             
                 <Link as={motion.a} 
+                      aria-label="Codepen"
                       href="https://codepen.io/TheAlexC"  
                       whileHover={{scale:1.2}} 
                       isExternal
@@ -36,6 +39,7 @@ const MobileSocialLinks = () => {
                 </Link>
 
                 <Link as={motion.a} 
+                      aria-label="Email"
                       href="mailto: pa.camejo@gmail.com" 
                       whileHover={{scale:1.2}} 
                       isExternal

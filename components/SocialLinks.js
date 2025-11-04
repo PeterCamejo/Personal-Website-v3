@@ -14,41 +14,45 @@ const SocialLinks = () =>{
                 ml={3}  
                 bottom={0} 
                 left={0}>
-                <Link as={motion.a}  
+                <Link as={motion.a}
+                      aria-label="LinkedIn"
                       href="https://www.linkedin.com/in/peter-camejo-908472110/" 
                       whileHover={{scale:1.2}} 
                       isExternal
                 >   
-                    <motion.div initial={{opacity:0, y:30}} animate={{opacity:[0,1], y:[30,0]}} transition={{delay:4.0, type:'spring', bounce:1, duration:0.5}}>
+                    <motion.div initial={{opacity:0, y:30}} animate={{opacity:[0,1], y:[30,0]}} transition={{delay:0.8, type:'spring', bounce:1, duration:0.5}}>
                         <Icon as={FaLinkedinIn} boxSize={8} />
                     </motion.div>
                 </Link> 
                 <Link as={motion.a} 
+                      aria-label="Github"
                       href="https://github.com/PeterCamejo" 
                       whileHover={{scale:1.2}} 
                       isExternal
                 >
-                    <motion.div initial={{opacity:0, y:30}} animate={{opacity:[0,1], y:[30,0]}} transition={{delay:4.3, type:'spring', bounce:1, duration:0.5}}> 
+                    <motion.div initial={{opacity:0, y:30}} animate={{opacity:[0,1], y:[30,0]}} transition={{delay:1.1, type:'spring', bounce:1, duration:0.5}}> 
                         <Icon as={FaGithub} boxSize={8}  />
                     </motion.div>
                 </Link>
             
                 <Link as={motion.a} 
+                      aria-label="Codepen"
                       href="https://codepen.io/TheAlexC"  
                       whileHover={{scale:1.2}} 
                       isExternal
                 >
-                    <motion.div initial={{opacity:0, y:30}} animate={{opacity:[0,1], y:[30,0]}} transition={{delay:4.6, type:'spring', bounce:1, duration:0.5}}>        
+                    <motion.div initial={{opacity:0, y:30}} animate={{opacity:[0,1], y:[30,0]}} transition={{delay:1.3, type:'spring', bounce:1, duration:0.5}}>        
                             <Icon as={FaCodepen} boxSize={8}  />
                     </motion.div>    
                 </Link>
 
                 <Link as={motion.a} 
+                      aria-label="Email"
                       href="mailto: pa.camejo@gmail.com" 
                       whileHover={{scale:1.2}} 
                       isExternal
                 >
-                    <motion.div initial={{opacity:0, y:30}} animate={{opacity:[0,1], y:[30,0]}} transition={{delay:4.9, type:'spring', bounce:1, duration:0.5}}>
+                    <motion.div initial={{opacity:0, y:30}} animate={{opacity:[0,1], y:[30,0]}} transition={{delay:1.6, type:'spring', bounce:1, duration:0.5}}>
                             <Icon as={FaRegEnvelope} boxSize={8}  />
                     </motion.div>     
                 </Link>

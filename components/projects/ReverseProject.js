@@ -16,8 +16,8 @@ const ReverseProject = (props) =>{
     const [headingRef, headingInView] = useInView();
 
     const {colorMode} = useColorMode();
-    const bg = colorMode === 'light' ? "#ff5314" : '#090088';
-    const secondaryColor = useColorModeValue("#FFCF07" , '#06fdd8');
+    const bg = colorMode === 'light' ? "#ff6128" : '#21159e';
+    const secondaryColor = useColorModeValue('#FFD166', '#B0DFFF');
     const imageBG = useColorModeValue("linear-gradient(0.4turn, #fcc404, #fcc917)", "linear-gradient(0.4turn, #06fdd8, #06fdf1)");
 
     useEffect(()=>{

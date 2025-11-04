@@ -7,7 +7,7 @@ const LandingSection = () =>{
     <Box id="landingSection"  
          display="flex" 
          p="60px" 
-         backgroundColor={useColorModeValue('#f58c00', '#03002e' )}  
+         backgroundColor={useColorModeValue('#FF8C42', '#1A2C42' )}  
          h='100vh' 
          w='100%' 
          justifyContent="start" 
@@ -20,17 +20,17 @@ const LandingSection = () =>{
                 </Text>    
             </motion.div>  
         */}    
-            <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:2.0,  duration:0.5}}>
+            <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:0.3,  duration:0.5}}>
                 <Heading as="h1" size="4xl" mb={5} >Peter Camejo</Heading>
             </motion.div>
-            <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:3.0,  duration:0.5}}>
+            <motion.div initial = {{opacity:0}} animate={{opacity:[0,1]}} transition={{delay:0.8,  duration:0.5}}>
                 <Text fontSize={{base:'20px' , md: "30px"}} 
                       w="fit-content" 
                       color="black" 
                       p={3} 
                       mb={3} 
                       rounded="lg" 
-                      backgroundColor={useColorModeValue("#FFCF07", '#06fdd8')}
+                      backgroundColor={useColorModeValue('#FFD166', '#B0DFFF')}
                 >
                     An information security professional based in Atlanta, GA
                 </Text>

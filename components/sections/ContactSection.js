@@ -1,4 +1,3 @@
-import ContactForm from '../ContactForm';
 import MobileSocialLinks from '../MobileSocialLinks';
 import {Box, Container, Text,Heading, useColorModeValue} from '@chakra-ui/react'
 
@@ -13,7 +12,7 @@ const ContactSection = () => {
              alignItems="center"
              h="50vh" 
              w="100%" 
-             backgroundColor={useColorModeValue('#f58c00', '#03002e' )}
+             backgroundColor={useColorModeValue('#FF8C42', '#1A2C42' )}
         >
             <Container maxW='container.md' mb={8} centerContent>
                 <Heading as="h1" mb={5}>Thanks for stopping by!</Heading>

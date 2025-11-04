@@ -1,0 +1,102 @@
+import {
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    Link,
+    Box,
+    Container,
+    IconButton,
+    Heading,
+    HStack,
+    useColorModeValue,
+    useBreakpointValue,
+  } from '@chakra-ui/react'
+import {HamburgerIcon} from '@chakra-ui/icons'
+import ColorModeButton from '../ColorModeButton'
+import {motion, useViewportScroll } from 'framer-motion'
+import React, {useState, useEffect} from 'react'
+
+const HomelabNavbar = () =>{
+    const navLogo = useBreakpointValue({base:'PC' , md: 'Peter Camejo'});
+
+    const variants = {
+        visible:{opacity: 1, y: 0},
+        hidden:{opacity: 0, y:-100}
+    }
+
+    const [visible , setVisible] = useState(true);
+
+    const {scrollY} = useViewportScroll();
+
+    function setVisibility(){
+
+        if(scrollY.current < scrollY.prev){
+            //Scrolling up, show navbar
+            setVisible(true);
+        }else if (scrollY.current > 100 && scrollY.current > scrollY.prev){
+            //Scrolling down,  hide navbar
+            setVisible(false);
+        }
+    }
+
+
+    useEffect(()=>{
+        return scrollY.onChange(()=> setVisibility());
+    });
+
+
+    return(
+        <Box position="fixed" 
+            as={motion.nav} 
+            animate={visible ? "visible" : "hidden"}
+            initial={{opacity:0}}
+            variants={variants}
+            display="flex"
+            boxShadow={useColorModeValue("lg" , "dark-lg")}
+            p={3}
+            flexDir="row" 
+            style={{backdropFilter: 'blur(10px)'}}
+            top={0} 
+            zIndex={5} 
+            backgroundColor={useColorModeValue('#f58c0090','#03002e90')} 
+            width="full">
+
+            <HStack w="full">
+                <Box display="flex" justifyContent="start" alignItems="start" textAlign="left" w="100%">
+                    <Link  href="/" _hover={{textDecoration:"none"}}>
+                        <Heading as="h1" w="100%">
+                            <motion.div  whileHover={{y:-5}}  initial={{opacity:0, x: -20}} animate={{opacity:[0,1], x:[-20,0]}} transition={{delay:0.3, ease: 'easeIn', duration:0.2}}>
+                                {navLogo}
+                            </motion.div>
+                        </Heading>
+                    </Link>
+                </Box>
+                <Container textAlign="right">
+                    <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:0.8, type:'spring', bounce:2, duration:0.5}}>
+                        <ColorModeButton />
+                    </motion.div>
+                </Container>
+                <HStack   
+                        alignItems="end" 
+                        justifyContent="space-between" 
+                        fontSize='25px' 
+                        pr='60px'
+                >
+                    <Link as={motion.a} 
+                        href="/" 
+                        whileHover={{y:-5}}   
+                        _hover={{textDecoration:"none"}}
+                    >
+                        <motion.div initial={{opacity:0, y:20}} animate={{opacity:[0,1], y:[20,0]}} transition={{delay:1, type:'spring', bounce:2, duration:0.5}}>
+                            Home
+                        </motion.div>
+                    </Link>
+                </HStack>
+            </HStack>    
+        </Box>
+    )
+
+}
+
+export default HomelabNavbar
