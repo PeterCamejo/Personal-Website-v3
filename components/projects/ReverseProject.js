@@ -37,7 +37,9 @@ const ReverseProject = (props) =>{
               align="center" 
               mb={"120px"} 
         >
-            <Link href={props.demoLink ? props.demoLink : props.githubLink} isExternal>
+            <Link href={props.demoLink ? props.demoLink : props.githubLink} 
+                aria-label={props.linkAriaLabel}
+                isExternal>
                 <Box as={motion.div} 
                     initial={{opacity:0 , x:20}} 
                     animate={imageAnimation}  
@@ -101,7 +103,8 @@ const ReverseProject = (props) =>{
                 })}
                 <HStack>
                     {props.githubLink ? 
-                        <Link as={motion.a} 
+                        <Link as={motion.a}
+                            aria-label={props.linkAriaLabel} 
                             initial={{opacity:0 , y:20}} 
                             animate={descriptionAnimation} 
                             whileHover={{scale:1.2}} 
@@ -111,6 +114,7 @@ const ReverseProject = (props) =>{
                         </Link> : null}
                     { props.demoLink ? 
                         <Link href={props.demoLink} 
+                            aria-label={props.linkAriaLabel}
                             as={motion.a} 
                             initial={{opacity:0 , y:20}} 
                             animate={descriptionAnimation}  

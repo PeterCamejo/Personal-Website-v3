@@ -43,7 +43,7 @@ const Project = (props) =>{
                        w={{base:'300px' , md:"fit-content"}}
             >
                 <motion.div initial={{opacity:0 , y: 20}} animate={headingAnimation} ref={headingRef}>
-                    <Link href={props.demoLink ? props.demoLink : props.githubLink} 
+                    <Link href={props.demoLink ? props.demoLink : props.githubLink}
                           _hover={{color:headingColor}} 
                           isExternal
                     >
@@ -82,7 +82,8 @@ const Project = (props) =>{
                 })}
                 <HStack float="right" w="fit-content">
                     {props.githubLink ? 
-                        <Link as={motion.a} 
+                        <Link as={motion.a}
+                            aria-label={props.linkAriaLabel} 
                             initial={{opacity:0 , y:20}} 
                             animate={descriptionAnimation}  
                             whileHover={{scale:1.2}} 
@@ -95,6 +96,7 @@ const Project = (props) =>{
                         </Link> : null}
                     { props.demoLink ? 
                         <Link href={props.demoLink} 
+                            aria-label={props.linkAriaLabel}
                             as={motion.a} 
                             initial={{opacity:0 , y:20}} 
                             animate={descriptionAnimation}  
@@ -106,7 +108,9 @@ const Project = (props) =>{
                         <ExternalLinkIcon boxSize={6}></ExternalLinkIcon></Link> : null}
                 </HStack>
             </Container>
-                <Link href={props.demoLink ? props.demoLink : props.githubLink} isExternal>        
+                <Link href={props.demoLink ? props.demoLink : props.githubLink} 
+                    aria-label={props.linkAriaLabel}
+                    isExternal>        
                     <Box as={motion.div} 
                         initial={{opacity:0 , x:20}} 
                         animate={imageAnimation}
