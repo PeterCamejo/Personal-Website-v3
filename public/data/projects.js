@@ -36,7 +36,7 @@ const projects = [
         projectTitle: "Github",
         projectImage: "../projectImages/github.webp",
         githubLink: "https://github.com/PeterCamejo",
-        projectDescription: "My portfolio website, which you are currently on! This is the third iteration and the first to be done with React.",
+        projectDescription: "Demonstrated proficiency in software development and project lifecycle management through a public repository of projects, showcasing practical skills across the displayed technologies—including full-stack development with Next.js and React, data processing using Python, and systems programming fundamentals in C++ and Java.",
         badges:["Next.js", "Tailwind", "React.js", "Python", "C++", "Java"]
     }
 ]

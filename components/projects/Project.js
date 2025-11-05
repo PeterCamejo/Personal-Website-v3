@@ -115,7 +115,7 @@ const Project = (props) =>{
                         boxShadow={{base:"dark-lg", md:"base"}} 
                         backgroundColor={ imageBgColor}
                         background={imageBg}
-                        className={styles.projectImageContainer} 
+                        className={styles.projectImageContainer}
                         _hover={{md:{backgroundColor:"none", background:"none"}}} 
                     >
                         <Image src={props.projectImage} 
