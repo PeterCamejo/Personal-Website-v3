@@ -13,7 +13,7 @@ export default function Website() {
     <Box h="100%" w='100%' backgroundColor={bgColor}>
       <SiteHead />
       <Navbar />
-      <Box>
+      <Box role="main" >
         <LandingSection />
         <PortfolioSection />
         <ContactSection />
