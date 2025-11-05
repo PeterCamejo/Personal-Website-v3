@@ -26,12 +26,13 @@ const PortfolioSection = () =>{
           {projects.map((project, index)=>{
             if(index % 2 !== 0){
               return (
-                <ReverseProject projectTitle={project.projectTitle} 
+                <ReverseProject projectTitle={project.projectTitle}
                         projectDescription={project.projectDescription}
                         projectImage={project.projectImage}
                         badges={project.badges}
                         githubLink={project.githubLink}
                         demoLink={project.demoLink}
+                        linkAriaLabel={project.linkAriaLabel} 
                         key={index}
                 />
               )
@@ -43,6 +44,7 @@ const PortfolioSection = () =>{
                         badges={project.badges}
                         githubLink={project.githubLink}
                         demoLink={project.demoLink}
+                        linkAriaLabel={project.linkAriaLabel} 
                         key={index}
                 />
             )
