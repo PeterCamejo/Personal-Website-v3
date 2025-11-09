@@ -21,7 +21,6 @@ const OtherProject = (props) =>{
 
     return(
         <Link href={props.projectHref} _hover={{textDecoration:"none"}} 
-            aria-label={props.linkAriaLabel}
             isExternal>
             <Box as={motion.div} 
                 initial={{opacity:0 , y:20}} 
