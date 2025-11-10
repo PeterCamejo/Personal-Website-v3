@@ -14,7 +14,7 @@ const MobileSocialLinks = () => {
         >
             <Link as={motion.a}  
                       aria-label="LinkedIn"
-                      href="https://www.linkedin.com/in/peter-camejo-908472110/" 
+                      href="https://www.linkedin.com/in/peter-camejo/" 
                       whileHover={{scale:1.2}} 
                       isExternal
                 >   
